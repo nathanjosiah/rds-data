@@ -215,6 +215,7 @@ export class RDSData {
               break;
             case 'UUID':
             case 'TEXT':
+            case 'MEDIUMTEXT':
             case 'CHAR':
             case 'BPCHAR':
             case 'VARCHAR':
