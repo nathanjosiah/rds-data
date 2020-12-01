@@ -221,6 +221,9 @@ export class RDSData {
             case 'VARCHAR':
               v.string = isNull ? undefined : record[c].stringValue;
               break;
+            case 'DECIMAL':
+              v.number = isNull ? undefined : Number(record[c].stringValue);
+              break;
             default:
               throw new Error(`Missing type: ${columns[c].type}`);
           }
